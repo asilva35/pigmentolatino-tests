@@ -16,22 +16,41 @@
     height: 414px;
     margin: 50px auto;
     perspective: 1000px;
-    border: solid;
     transition: all 0.5s ease-in-out;
 }
 
 #canvas.s13x18{
-    width: 36px;
-    height: 50px;
+    width: 202px;
+    height: 280px;
 }
 
 #canvas.s20x30{
-    width: 260px;
-    height: 390px;
+    width: 213px;
+    height: 320px;
 }
 
 #canvas.s30x40{
-    width: 260px;
+    width: 248px;
+    height: 330px;
+}
+
+#canvas.s40x50{
+    width: 272px;
+    height: 340px;
+}
+
+#canvas.s50x70{
+    width: 257px;
+    height: 360px;
+}
+
+#canvas.s60x90{
+    width: 253px;
+    height: 380px;
+}
+
+#canvas.s70x100{
+    width: 273px;
     height: 390px;
 }
 
@@ -41,18 +60,18 @@
 }
 
 #canvas.s20x20{
-    width: 180px;
-    height: 180px;
+    width: 250px;
+    height: 250px;
 }
 
 #canvas.s30x30{
-    width: 200px;
-    height: 200px;
+    width: 260px;
+    height: 260px;
 }
 
 #canvas.s50x50{
-    width: 269px;
-    height: 269px;
+    width: 289px;
+    height: 289px;
 }
 
 #canvas.s70x70{
@@ -125,10 +144,10 @@
 }
 
 #imageCanvasCnt.MariaLuisa .img{
-    width: calc(100% - 160px);
-    height: calc(100% - 160px);
-    border:solid 80px transparent;
-    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/maria-luisa-arena.png?v=1710791776) 80 round;
+    width: calc(100% - 80px);
+    height: calc(100% - 80px);
+    border:solid 40px transparent;
+    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/maria-luisa-arena.png?v=1710791776) 40 round;
     filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);
     background-color: #e3e3e3;
 }
@@ -149,6 +168,7 @@
 
 #imageCanvasCnt.CanvasTensado .img{
     background-size: 80%;
+    background-position: 80%;
 }
 #imageCanvasCnt.CanvasTensado{
     transform-style: preserve-3d;
