@@ -43,7 +43,7 @@ const imageStyleCanvasOnly = [
   'left: 50%;',
   'transform: translate(-50%, -50%);',
   'width:auto;',
-  'height:100%;',
+  'height:80%;',
   'filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);',
   'transition: all 0.5s ease-in-out;',
 ].join(' ');
@@ -94,7 +94,8 @@ const imageStyleCanvasTensado = [
   'transform: perspective(900px) rotateY(55deg) translate(-50%, -50%);',
   'width:auto;',
   'height:60%;',
-  'border:10px solid transparent;',
+  'border:25px solid transparent;',
+  'border-image: url(http://127.0.0.1:5500/images/frames/canva_blanco.jpg) 25 round;',
   'filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);',
   'transition: all 0.5s ease-in-out;',
 ].join(' ');
@@ -127,6 +128,49 @@ if (productmedia.length > 0) {
   image.id = 'main-canvas-image';
   canvas_product.appendChild(image);
 
+  //CREATE 3D BOX ELEMENT
+  const box3d = document.createElement('div');
+  const box3DWidth = 490;
+  const box3DHeight = 617;
+  box3d.id = 'box';
+  box3d.style = `display:none;position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) rotateY(30deg) rotateX(30deg); width: ${box3DWidth}px; height: ${box3DHeight}px;transform-style: preserve-3d;transition: all 0.5s ease-in-out;`;
+  canvas_product.appendChild(box3d);
+  const box3dFront = document.createElement('div');
+  const box3dBack = document.createElement('div');
+  const box3dRight = document.createElement('div');
+  const box3dLeft = document.createElement('div');
+  const box3dTop = document.createElement('div');
+  const box3dBottom = document.createElement('div');
+
+  const box3dFaceStyle =
+    'display:block;position: absolute;width: 100%;height: 100%;';
+
+  box3dFront.style =
+    box3dFaceStyle +
+    'transform: translateZ( -50px) rotateY(0deg);background:rgba(255,0,0,0.5);';
+  box3dBack.style =
+    box3dFaceStyle +
+    'transform: translateZ( -50px) rotateY(180deg);background:rgba(255,255,0,0.5);';
+  box3dRight.style =
+    box3dFaceStyle +
+    'transform: translateZ( -150px) rotateY(90deg);background:rgba(255,0,255,0.5);';
+  box3dLeft.style =
+    box3dFaceStyle +
+    'transform: translateZ( -150px) rotateY(-90deg);background:rgba(0,255,0,0.5);';
+  box3dTop.style =
+    box3dFaceStyle +
+    'transform: translateZ( -100px) rotateX(90deg);background:rgba(0,255,255,0.5);';
+  box3dBottom.style =
+    box3dFaceStyle +
+    'transform: translateZ( -100px) rotateX(-90deg);background:rgba(255,50,0,0.5);';
+
+  box3d.appendChild(box3dFront);
+  box3d.appendChild(box3dBack);
+  box3d.appendChild(box3dRight);
+  box3d.appendChild(box3dLeft);
+  box3d.appendChild(box3dTop);
+  box3d.appendChild(box3dBottom);
+
   //CLICK EVENT IN btn-frame
   const btn_frame = document.querySelectorAll('.btn-frame');
   btn_frame.forEach((btn) => {
@@ -134,16 +178,28 @@ if (productmedia.length > 0) {
       const selectedframe = e.target.dataset.selectedframe;
       if (selectedframe === 'no-frame') {
         image.style = imageStyleDefault;
+        image.style.display = 'block';
+        box3d.style.display = 'none';
       } else if (selectedframe === 'with-frame') {
         image.style = imageStyleWithFrame;
+        image.style.display = 'block';
+        box3d.style.display = 'none';
       } else if (selectedframe === 'with-maria-luisa') {
         image.style = imageStyleWithMariaLuisa;
+        image.style.display = 'block';
+        box3d.style.display = 'none';
       } else if (selectedframe === 'canvas-only') {
         image.style = imageStyleCanvasOnly;
+        image.style.display = 'block';
+        box3d.style.display = 'none';
       } else if (selectedframe === 'canvas-tensado') {
         image.style = imageStyleCanvasTensado;
+        image.style.display = 'none';
+        box3d.style.display = 'block';
       } else if (selectedframe === 'canvas-tensado-frame') {
         image.style = imageStyleCanvasTensadoFrame;
+        image.style.display = 'block';
+        box3d.style.display = 'none';
       }
     });
   });

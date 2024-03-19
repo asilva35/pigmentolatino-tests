@@ -1,0 +1,175 @@
+#wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper-options{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+#canvas{
+    width: 299px;
+    height: 414px;
+    margin: 50px auto;
+    perspective: 1000px;
+    border: solid;
+    transition: all 0.5s ease-in-out;
+}
+
+#canvas.s13x18{
+    width: 299px;
+    height: 414px;
+}
+
+#canvas.s20x30{
+    width: 260px;
+    height: 390px;
+}
+
+#canvas.s20x20{
+    width: 85px;
+    height: 85px;
+}
+
+#canvas.s30x30{
+    width: 128px;
+    height: 128px;
+}
+
+#canvas.s50x50{
+    width: 214px;
+    height: 214px;
+}
+
+#canvas.s70x70{
+    width: 299px;
+    height: 299px;
+}
+
+#canvas.s60x150{
+    width: 166px;
+    height: 414px;
+}
+
+#imageCanvasCnt{
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+  height: 100%;
+  position: relative;
+  transform: rotateX(0deg) rotateY(0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#imageCanvasCnt .img{
+    width: 100%;
+    height: 100%;
+    background-image: url(http://127.0.0.1:5500/Our%20awesome%20T-shirt%20in%2070%20characters%20or%20less.%20%E2%80%93%20My%20Store_files/image_011.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+#imageCanvasCnt.Frame .img{
+    border:solid 20px transparent;
+    filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+}
+
+#imageCanvasCnt.Frame.Arena .img{
+    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-arena.png?v=1710791496) 20 round;
+}
+
+#imageCanvasCnt.Frame.Caramelo .img{
+    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-caramelo.png?v=1710871747) 20 round;
+}
+
+#imageCanvasCnt.Frame.Cafe .img{
+    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-cafe.png?v=1710873108) 20 round;
+}
+
+#imageCanvasCnt.Frame.CafeOscuro .img{
+    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-cafe-oscuro.png?v=1710873107) 20 round;
+}
+
+#imageCanvasCnt.Frame.Negro .img{
+    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-negro.png?v=1710873107) 20 round;
+}
+
+#imageCanvasCnt.Frame.Blanco .img{
+    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-blanco.png?v=1710873107) 20 round;
+}
+
+#imageCanvasCnt.Frame.Dorado .img{
+    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-dorado.png?v=1710873107) 20 round;
+}
+
+#imageCanvasCnt.Frame.Plateado .img{
+    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-plateado.png?v=1710873105) 20 round;
+}
+
+#imageCanvasCnt.MariaLuisa .img{
+    max-height: 44%;
+    border:solid 80px transparent;
+    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/maria-luisa-arena.png?v=1710791776) 80 round;
+    filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);
+    background-color: #e3e3e3;
+}
+
+#imageCanvasCnt.Canvas{
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+  height: 100%;
+  position: relative;
+  transform: rotateX(60deg) rotateY(0deg) rotateZ(-10deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f5e9;
+  filter:drop-shadow(rgba(34, 34, 34, 0.37) -8px 8px 9px);
+}
+
+#imageCanvasCnt.CanvasTensado .img{
+    background-size: 80%;
+}
+#imageCanvasCnt.CanvasTensado{
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+  height: 100%;
+  position: relative;
+  transform: rotateX(0deg) rotateY(30deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f5e9;
+  filter:drop-shadow(rgba(34, 34, 34, 0.37) -8px 8px 9px);
+}
+
+#imageCanvasCnt.CanvasTensado::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #d3cfcab0;
+    width: 30px;
+    height: 100%;
+    transform: perspective(1000px) rotateX(0) rotateY(-30deg) translateZ(6px) translateY(-0px);
+}
+
+#imageCanvasCnt.CanvasTensadoFrame .img{
+    max-height: 84%;
+  border:solid 25px transparent;
+  border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/canvas-tensado-frame_2637bde6-50da-4cd5-8035-ff7861938bf4.png?v=1710793392) 25 round;
+  filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);
+}

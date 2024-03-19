@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST</title>
+    <link rel="stylesheet" href="style-test.css">
+    <script src="./test.js?v=0.1"></script>
+</head>
+<body>
+
+    <div id="wrapper">
+  <div id="canvas">
+    <div id="imageCanvasCnt">
+        <!-- <img src="http://127.0.0.1:5500/Our%20awesome%20T-shirt%20in%2070%20characters%20or%20less.%20%E2%80%93%20My%20Store_files/image_011.webp" /> -->
+        <div class="img"></div>
+    </div>
+  </div>
+
+  <div class="wrapper-options">
+  <select id="select-options" onchange="onChangeOptions(this.options[this.selectedIndex].text);">
+    <option>Photo</option>
+    <option>Frame</option>
+    <option>Maria Luisa</option>
+    <option>Canvas</option>
+    <option>Canvas Tensado</option>
+    <option>Canvas Tensado Frame</option>
+  </select>
+
+  <select id="select-colors" onchange="onChangeColor(this.options[this.selectedIndex].text);">
+    <option>Arena</option>
+    <option>Caramelo</option>
+    <option>Cafe</option>
+    <option>Cafe Oscuro</option>
+    <option>Negro</option>
+    <option>Blanco</option>
+    <option>Dorado</option>
+    <option>Plateado</option>
+  </select>
+
+  <select id="select-sizes" onchange="onChangeSize(this.options[this.selectedIndex].text);">
+    <option>13x18</option>
+    <option>20x20</option>
+    <option>20x30</option>
+    <option>30x30</option>
+    <option>30x40</option>
+    <option>40x50</option>
+    <option>50x50</option>
+    <option>50x70</option>
+    <option>70x70</option>
+    <option>60x90</option>
+    <option>70x100</option>
+    <option>60x150</option>
+  </select>
+</div>
+</div>
+
+</body>
+</html>
