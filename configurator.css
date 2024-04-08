@@ -1,0 +1,260 @@
+#configurator_canvasProduct{
+    width: 299px;
+    height: 414px;
+    margin: 50px auto;
+    perspective: 1000px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  #configurator_canvasProductCnt{
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: rotateX(0deg) rotateY(0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #configurator_canvasProductImg{
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-color: #fff;
+      transition: all 0.5s ease-in-out;
+      display:block!important;
+  }
+  
+  #configurator_canvasProductCnt.Frame #configurator_canvasProductImg{
+      border:solid 10px transparent;
+      filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);
+      width: calc(100% - 40px);
+      height: calc(100% - 40px);
+  }
+  
+  #configurator_canvasProductCnt.Frame.Arena #configurator_canvasProductImg{
+      border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-arena.png?v=1710791496) 10 round;
+  }
+  
+  #configurator_canvasProductCnt.Frame.Caramelo #configurator_canvasProductImg{
+      border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-caramelo.png?v=1710871747) 10 round;
+  }
+  
+  #configurator_canvasProductCnt.Frame.Cafe #configurator_canvasProductImg{
+      border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-cafe.png?v=1710873108) 10 round;
+  }
+  
+  #configurator_canvasProductCnt.Frame.CafeOscuro #configurator_canvasProductImg{
+      border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-cafe-oscuro.png?v=1710873107) 10 round;
+  }
+  
+  #configurator_canvasProductCnt.Frame.Negro #configurator_canvasProductImg{
+      border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-negro.png?v=1710873107) 10 round;
+  }
+  
+  #configurator_canvasProductCnt.Frame.Blanco #configurator_canvasProductImg{
+      border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-blanco.png?v=1710873107) 10 round;
+  }
+  
+  #configurator_canvasProductCnt.Frame.Dorado #configurator_canvasProductImg{
+      border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-dorado.png?v=1710873107) 10 round;
+  }
+  
+  #configurator_canvasProductCnt.Frame.Plateado #configurator_canvasProductImg{
+      border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-plateado.png?v=1710873105) 10 round;
+  }
+  
+  #configurator_canvasProductCnt.MariaLuisa #configurator_canvasProductImg{
+      width: calc(100% - 80px);
+      height: calc(100% - 80px);
+      border:solid 50px transparent;
+      border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/maria-luisa-arena.png?v=1710791776) 50 round;
+      filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);
+      background-color: #e3e3e3;
+  }
+  
+  #configurator_canvasProductCnt.Canvas{
+      transform-style: preserve-3d;
+      transition: all 0.5s ease-in-out;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform: rotateX(0deg) rotateY(30deg) rotateZ(0deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f3f5e9;
+      filter:drop-shadow(rgba(34, 34, 34, 0.37) -8px 8px 9px);
+  }
+  
+  #configurator_canvasProductCnt.CanvasTensado #configurator_canvasProductImg{
+      background-size: cover;
+      background-position: center;
+  }
+  #configurator_canvasProductCnt.CanvasTensado{
+      transform-style: preserve-3d;
+      transition: all 0.5s ease-in-out;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform: rotateX(0deg) rotateY(30deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f3f5e9;
+      filter:drop-shadow(rgba(34, 34, 34, 0.37) -8px 8px 9px);
+  }
+  
+  #configurator_canvasProductCnt.CanvasTensado::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #ffffff91;
+      width: 30px;
+      height: 100%;
+      transform: perspective(1000px) rotateX(0) rotateY(-30deg) translateZ(6px) translateY(-0px);
+  }
+  
+  #configurator_canvasProductCnt.CanvasTensadoFrame #configurator_canvasProductImg{
+      max-height: 84%;
+      border:solid 15px transparent;
+      border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/canvas-tensado-frame_2637bde6-50da-4cd5-8035-ff7861938bf4.png?v=1710793392) 25 round;
+      filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);
+  }
+  
+  .configurator_mainImageStyleDefault{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:auto;
+    height:100%;
+    filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .configurator_mainImageStyleWithFrame{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:auto;
+    height:90%;
+    border:solid 10px transparent;
+    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-arena.png?v=1710791496) 10 round;
+    filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .configurator_mainImageStyleWithMariaLuisa{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:auto;
+    height:90%;
+    border:solid 80px transparent;
+    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/maria-luisa-arena.png?v=1710791776) 80 round;
+    filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .configurator_mainImageStyleCanvasOnly{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:auto;
+    height:80%;
+    filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .configurator_mainImageStyleCanvasTensado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: perspective(900px) rotateY(55deg) translate(-50%, -50%);
+    width:auto;
+    height:60%;
+    border:25px solid transparent;
+    border-image: url(http://127.0.0.1:5500/images/frames/canva_blanco.jpg) 25 round;
+    filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .configurator_mainImageStyleCanvasTensadoFrame{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:auto;
+    height:90%;
+    border:solid 25px transparent;
+    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/canvas-tensado-frame_2637bde6-50da-4cd5-8035-ff7861938bf4.png?v=1710793392) 25 round;
+    filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .configurator_chooseFrame{
+    display:flex; 
+    flex-direction: row; 
+    gap:20px; 
+    border:none;
+    overflow-x:scroll;
+    overflow-y:hidden;
+  }
+  
+  .configurator_box3d{
+    display:none;
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%,-50%) rotateY(30deg) rotateX(30deg); 
+    width: 490px; 
+    height: 617px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .configurator_btnFrame{
+    cursor:pointer;
+  }
+  
+  .configurator_btnFrame_img{
+    width: 70px; 
+    height:70px; 
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  
+  .configurator_chooseColor{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    margin:20px 0;
+  }
+  
+  .configurator_chooseColor_ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap:5px;
+  }
+  
+  .configurator_chooseColor_btnColor{
+    display:block; 
+    cursor: pointer;
+    width: 24px; 
+    height:24px; 
+    border-radius: 12px; 
+    background-color: #F0DFD3;
+  }
