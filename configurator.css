@@ -114,7 +114,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      background: #ffffff91;
+      background: #c1c1c16b;
       width: 30px;
       height: 100%;
       transform: perspective(1000px) rotateX(0) rotateY(-30deg) translateZ(6px) translateY(-0px);

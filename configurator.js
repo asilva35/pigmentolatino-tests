@@ -157,6 +157,14 @@ function onBtnOptionColor() {
   });
 }
 
+function onBtnOptionSize() {
+  const product_info_container = document.querySelector(
+    'select[name="options[Size]"]'
+  );
+  //const labels = product_info_container.querySelectorAll('label');
+  console.log(product_info_container);
+}
+
 function renderCanvas() {
   const canvas = document.querySelector('#configurator_canvasProduct');
   const imageCanvas = document.querySelector('#configurator_canvasProductCnt');
@@ -186,5 +194,6 @@ window.onload = () => {
 
     onBtnOptionFrame();
     onBtnOptionColor();
+    onBtnOptionSize();
   }
 };
