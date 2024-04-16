@@ -73,6 +73,7 @@ let frame_size_selected = '13x18';
 let frames_variants = null;
 let frame_variant_selected = null;
 let item_price = 0;
+let product_info = null;
 
 function addFrameOptions(configurator_options) {
   //ADDING FRAME OPTIONS
@@ -221,6 +222,31 @@ function onBtnOptionSize() {
   });
 }
 
+function onThumbnailClick() {
+  const product_media = document.querySelector('.product__media-list');
+  const configurator_canvasProduct = document.querySelector(
+    '#configurator_canvasProduct'
+  );
+  const thumbnails = document.querySelectorAll('.thumbnail-list li');
+  const last_thumbnail = thumbnails.length;
+  thumbnails.forEach((thumb, i) => {
+    const button = thumb.querySelector('button');
+    button.dataset.key = i + 1;
+    button.addEventListener('click', (e) => {
+      const current = Number.parseInt(e.target.dataset.key);
+      if (current === last_thumbnail) {
+        console.log('LAST');
+        product_media.style.display = 'none';
+        configurator_canvasProduct.style.display = 'block';
+      } else {
+        console.log('FIRST');
+        configurator_canvasProduct.style.display = 'none';
+        product_media.style.display = 'flex';
+      }
+    });
+  });
+}
+
 function renderCanvas() {
   const canvas = document.querySelector('#configurator_canvasProduct');
   const imageCanvas = document.querySelector('#configurator_canvasProductCnt');
@@ -330,6 +356,107 @@ function customizeAddTocart() {
   });
 }
 
+function customizeBuyNow() {
+  const product_form__buttons = document.querySelector(
+    '.product-form__buttons'
+  );
+  const form = document.querySelector('form[action$="/cart/add"]');
+  const input_productid = form.querySelector('input[name="id"]');
+
+  const button = document.createElement('div');
+  button.innerHTML = 'Comprar ahora';
+  button.classList.add('configurator_buyNowBtn');
+  product_form__buttons.appendChild(button);
+}
+
+function customizeCartActions() {
+  const product_form__buttons = document.querySelector(
+    '.product-form__buttons'
+  );
+  const form = document.querySelector('form[action$="/cart/add"]');
+  const input_productid = form.querySelector('input[name="id"]');
+
+  const buttonAddCart = document.createElement('div');
+  buttonAddCart.innerHTML = 'Agregar al carrito';
+  buttonAddCart.classList.add('configurator_addToCartBtn');
+  product_form__buttons.appendChild(buttonAddCart);
+
+  const buttonBuyNow = document.createElement('div');
+  buttonBuyNow.innerHTML = 'Comprar ahora';
+  buttonBuyNow.classList.add('configurator_buyNowBtn');
+  product_form__buttons.appendChild(buttonBuyNow);
+
+  buttonAddCart.addEventListener('click', (e) => {
+    addProductToCart(input_productid, () => {
+      location.reload();
+    });
+  });
+
+  buttonBuyNow.addEventListener('click', (e) => {
+    addProductToCart(input_productid, () => {
+      location.href = window.Shopify.routes.root + 'cart';
+    });
+  });
+}
+
+function addProductToCart(input_productid, callback) {
+  let productid = input_productid.value;
+  let formData = {
+    items: [
+      {
+        id: productid,
+        quantity: 1,
+      },
+    ],
+  };
+
+  if (
+    frame_option_selected === 'Frame' ||
+    frame_option_selected === 'MariaLuisa' ||
+    frame_option_selected === 'CanvasTensadoFrame'
+  ) {
+    let search_option = `${frame_size_selected}`;
+    if (frame_option_selected === 'MariaLuisa') {
+      search_option = search_option + '-passepartout';
+    }
+    if (frame_option_selected === 'CanvasTensadoFrame') {
+      search_option = search_option + '-canvas';
+    }
+    const variant_found = frames_variants.find((variant) => {
+      if (variant.title === search_option) {
+        return variant;
+      }
+    });
+    if (variant_found) {
+      formData.items.push({
+        id: variant_found.id,
+        quantity: 1,
+      });
+    }
+  }
+
+  console.log(formData);
+
+  fetch(window.Shopify.routes.root + 'cart/add.js', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(formData),
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      if (data && data.items && data.items.length > 0) {
+        if (callback) callback();
+      }
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+}
+
 function loadFramesVariants() {
   fetch(window.Shopify.routes.root + 'products/Frames.js')
     .then((response) => response.json())
@@ -337,7 +464,7 @@ function loadFramesVariants() {
       if (frames && frames.variants) {
         frames_variants = frames.variants;
         selectFrameVariant();
-        customizeAddTocart();
+        customizeCartActions();
       }
     });
 }
@@ -385,6 +512,24 @@ function getItemPrice() {
   item_price = Number.parseFloat(price_str);
 }
 
+function fetchProduct() {
+  fetch(window.Shopify.routes.root + 'products/leopardo-2.js')
+    .then((response) => response.json())
+    .then((product) => {
+      product_info = product;
+      renderMainImage();
+    });
+}
+
+function renderMainImage() {
+  console.log(
+    product_info,
+    frame_option_selected,
+    frame_color_selected,
+    frame_size_selected
+  );
+}
+
 window.onload = () => {
   const productmedia = document.querySelectorAll('.product__media-item');
   const canvas_product = document.querySelector('#configurator_canvasProduct');
@@ -396,7 +541,7 @@ window.onload = () => {
     //productmedia[0].style = 'display:none;';
     const img = productmedia[productmedia.length - 1].querySelector('img');
 
-    configurator_canvasProductImg.style.backgroundImage = `url(${img.src})`;
+    //configurator_canvasProductImg.style.backgroundImage = `url(${img.src})`;
 
     addAlternativePrice(configurator_options);
     addFrameOptions(configurator_options);
@@ -407,7 +552,10 @@ window.onload = () => {
     onBtnOptionFrame();
     onBtnOptionColor();
     onBtnOptionSize();
+    onThumbnailClick();
 
     loadFramesVariants();
+
+    fetchProduct();
   }
 };
