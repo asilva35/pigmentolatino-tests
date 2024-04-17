@@ -255,7 +255,40 @@ function renderCanvas() {
   console.log(frame_option_selected, frame_color_selected, frame_size_selected);
   imageCanvas.classList.add(frame_option_selected.replaceAll(' ', ''));
   imageCanvas.classList.add(frame_color_selected.replaceAll(' ', ''));
-  canvas.classList.add(`s${frame_size_selected.replaceAll(' ', '')}`);
+  //canvas.classList.add(`s${frame_size_selected.replaceAll(' ', '')}`);
+  if (frame_size_selected && product_info) {
+    product_info.variants.map((variant, index) => {
+      if (variant.title === frame_size_selected) {
+        let delta_size = 20;
+        if (frame_option_selected === 'MariaLuisa') {
+          delta_size += 50;
+          if (['13x18', '20x20', '20x30'].includes(frame_size_selected)) {
+            delta_size += 40;
+          }
+          if (
+            ['30x30', '30x40', '40x50', '50x50', '50x70'].includes(
+              frame_size_selected
+            )
+          ) {
+            delta_size += 60;
+          }
+          if (
+            ['70x70', '60x90', '70x100', '60x150'].includes(frame_size_selected)
+          ) {
+            delta_size += 80;
+          }
+        }
+        configurator_canvasProductImg.style.backgroundImage = `url(${variant.featured_image.src})`;
+        configurator_canvasProductImg.style.width = `${
+          variant.featured_image.width + delta_size
+        }px`;
+        configurator_canvasProductImg.style.height = `${
+          variant.featured_image.height + delta_size
+        }px`;
+        configurator_canvasProductImg.style.backgroundSize = `${variant.featured_image.width}px ${variant.featured_image.height}px`;
+      }
+    });
+  }
   toggleOptionColors();
 }
 
@@ -512,22 +545,38 @@ function getItemPrice() {
   item_price = Number.parseFloat(price_str);
 }
 
-function fetchProduct() {
+function fetchProduct(configurator_canvasProductImg) {
   fetch(window.Shopify.routes.root + 'products/leopardo-2.js')
     .then((response) => response.json())
     .then((product) => {
       product_info = product;
-      renderMainImage();
+      renderMainImage(configurator_canvasProductImg);
     });
 }
 
-function renderMainImage() {
-  console.log(
-    product_info,
-    frame_option_selected,
-    frame_color_selected,
-    frame_size_selected
-  );
+function renderMainImage(configurator_canvasProductImg) {
+  if (frame_size_selected && product_info) {
+    product_info.variants.map((variant, index) => {
+      if (variant.title === frame_size_selected) {
+        configurator_canvasProductImg.style.backgroundImage = `url(${variant.featured_image.src})`;
+      }
+    });
+    renderThumbnails();
+  }
+}
+
+function renderThumbnails() {
+  if (product_info && product_info.media && product_info.media.length > 0) {
+    const list = document.querySelector(
+      '#configurator_canvasProduct_thumbnails ul'
+    );
+    product_info.media.forEach((media, i) => {
+      if (i > 1) return;
+      const li = document.createElement('li');
+      li.style.backgroundImage = `url(${media.src})`;
+      list.appendChild(li);
+    });
+  }
 }
 
 window.onload = () => {
@@ -556,6 +605,6 @@ window.onload = () => {
 
     loadFramesVariants();
 
-    fetchProduct();
+    fetchProduct(configurator_canvasProductImg);
   }
 };
