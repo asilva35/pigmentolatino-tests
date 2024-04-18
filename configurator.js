@@ -259,7 +259,13 @@ function renderCanvas() {
   if (frame_size_selected && product_info) {
     product_info.variants.map((variant, index) => {
       if (variant.title === frame_size_selected) {
-        let delta_size = 20;
+        let delta_size = 0;
+        if (frame_option_selected === 'CanvasTensadoFrame') {
+          delta_size += 20;
+        }
+        if (frame_option_selected === 'Frame') {
+          delta_size += 20;
+        }
         if (frame_option_selected === 'MariaLuisa') {
           delta_size += 50;
           if (['13x18', '20x20', '20x30'].includes(frame_size_selected)) {
