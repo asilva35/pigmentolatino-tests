@@ -145,7 +145,14 @@ function addColorOptions(configurator_options) {
 
   const choose_color_ul = document.createElement('ul');
   choose_color_ul.classList.add('configurator_chooseColor_ul');
-  choose_color.appendChild(choose_color_ul);
+  choose_color_list_cnt.appendChild(choose_color_ul);
+
+  const choose_color_label = document.createElement('div');
+  choose_color_label.classList.add('configurator_chooseColor_label');
+  choose_color_label.innerHTML = 'Arena';
+  choose_color_list_cnt.appendChild(choose_color_label);
+
+  choose_color.appendChild(choose_color_list_cnt);
 
   const choose_color_li = document.createElement('li');
   choose_color_ul.appendChild(choose_color_li);
@@ -175,6 +182,21 @@ function addColorOptions(configurator_options) {
   configurator_options.appendChild(choose_color);
 }
 
+function addSizesGuide(configurator_options) {
+  const sizes_guide = document.createElement('div');
+  sizes_guide.classList.add('configurator_sizeguide');
+
+  const link = document.createElement('a');
+  link.classList.add('configurator_sizeguide_link');
+  link.href = '/sizes-guide';
+  link.target = '_blanck';
+  link.innerHTML = 'Guía de Tamaños';
+
+  sizes_guide.appendChild(link);
+
+  configurator_options.appendChild(sizes_guide);
+}
+
 function addAlternativePrice(configurator_options) {
   let price_str = document.querySelector('.price-item').innerHTML;
   const price_container = document.querySelector('.price__regular');
@@ -185,9 +207,13 @@ function addAlternativePrice(configurator_options) {
 }
 
 function onBtnOptionFrame() {
-  const btn_frame = document.querySelectorAll('.configurator_btnFrame');
-  btn_frame.forEach((btn) => {
+  const btns_frame = document.querySelectorAll('.configurator_btnFrame');
+  btns_frame.forEach((btn) => {
     btn.addEventListener('click', (e) => {
+      btns_frame.forEach((btn) => {
+        btn.classList.remove('selected');
+      });
+      e.target.classList.add('selected');
       frame_option_selected = e.target.dataset.selectedframe;
       renderCanvas();
       getItemPrice();
@@ -252,7 +278,6 @@ function renderCanvas() {
   const imageCanvas = document.querySelector('#configurator_canvasProductCnt');
   canvas.className = '';
   imageCanvas.className = '';
-  console.log(frame_option_selected, frame_color_selected, frame_size_selected);
   imageCanvas.classList.add(frame_option_selected.replaceAll(' ', ''));
   imageCanvas.classList.add(frame_color_selected.replaceAll(' ', ''));
   //canvas.classList.add(`s${frame_size_selected.replaceAll(' ', '')}`);
@@ -302,25 +327,67 @@ function toggleOptionColors() {
   const configurator_chooseColor_ul = document.querySelector(
     '.configurator_chooseColor_ul'
   );
+
+  const configurator_chooseColor_label = document.querySelector(
+    '.configurator_chooseColor_label'
+  );
+
   configurator_chooseColor_ul.querySelectorAll('li').forEach((li) => {
     if (
-      frame_option_selected == 'Photo' ||
-      frame_option_selected == 'Canvas' ||
-      frame_option_selected == 'CanvasTensado'
+      ['Frame', 'MariaLuisa', 'CanvasTensadoFrame'].includes(
+        frame_option_selected
+      )
     ) {
       if (li.classList.contains('no-color')) {
-        li.style.display = 'block';
-      } else {
         li.style.display = 'none';
+      } else {
+        li.style.display = 'block';
       }
     } else {
       if (li.classList.contains('no-color')) {
-        li.style.display = 'none';
-      } else {
         li.style.display = 'block';
+      } else {
+        li.style.display = 'none';
       }
     }
   });
+
+  if (
+    ['Frame', 'MariaLuisa', 'CanvasTensadoFrame'].includes(
+      frame_option_selected
+    )
+  ) {
+    let label_text = frame_color_selected;
+    label_text = label_text.replaceAll('Cafe', 'Café');
+    configurator_chooseColor_label.innerHTML = label_text;
+    if (frame_color_selected === 'Arena') {
+      configurator_chooseColor_label.style.transform = 'translate(0,0)';
+    }
+    if (frame_color_selected === 'Caramelo') {
+      configurator_chooseColor_label.style.transform = 'translate(12px,0)';
+    }
+    if (frame_color_selected === 'Cafe') {
+      configurator_chooseColor_label.style.transform = 'translate(56px,0)';
+    }
+    if (frame_color_selected === 'Cafe Oscuro') {
+      configurator_chooseColor_label.style.transform = 'translate(60px,0)';
+    }
+    if (frame_color_selected === 'Negro') {
+      configurator_chooseColor_label.style.transform = 'translate(110px,0)';
+    }
+    if (frame_color_selected === 'Blanco') {
+      configurator_chooseColor_label.style.transform = 'translate(135px,0)';
+    }
+    if (frame_color_selected === 'Dorado') {
+      configurator_chooseColor_label.style.transform = 'translate(165px,0)';
+    }
+    if (frame_color_selected === 'Plateado') {
+      configurator_chooseColor_label.style.transform = 'translate(175px,0)';
+    }
+    configurator_chooseColor_label.style.opacity = 1;
+  } else {
+    configurator_chooseColor_label.style.opacity = 0;
+  }
 }
 
 function customizeAddTocart() {
@@ -565,6 +632,9 @@ function renderMainImage(configurator_canvasProductImg) {
     product_info.variants.map((variant, index) => {
       if (variant.title === frame_size_selected) {
         configurator_canvasProductImg.style.backgroundImage = `url(${variant.featured_image.src})`;
+        configurator_canvasProductImg.style.width = `${variant.featured_image.width}px`;
+        configurator_canvasProductImg.style.height = `${variant.featured_image.height}px`;
+        configurator_canvasProductImg.style.backgroundSize = `${variant.featured_image.width}px ${variant.featured_image.height}px`;
       }
     });
     renderThumbnails();
@@ -593,14 +663,12 @@ window.onload = () => {
   );
   const configurator_options = document.querySelector('.configurator_options');
   if (productmedia.length > 0) {
-    //productmedia[0].style = 'display:none;';
     const img = productmedia[productmedia.length - 1].querySelector('img');
-
-    //configurator_canvasProductImg.style.backgroundImage = `url(${img.src})`;
 
     addAlternativePrice(configurator_options);
     addFrameOptions(configurator_options);
     addColorOptions(configurator_options);
+    addSizesGuide(configurator_options);
 
     getItemPrice();
 
