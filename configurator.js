@@ -27,7 +27,7 @@ const frame_options = [
   {
     selection: 'CanvasTensadoFrame',
     img_choose:
-      'https://cdn.shopify.com/s/files/1/0686/9106/7109/files/btn-canvas-tensado-frame.png?v=1710787013',
+      'https://cdn.shopify.com/s/files/1/0838/8866/8990/files/btn-canvas-tensado-frame-v2.png?v=1714084774',
   },
 ];
 
