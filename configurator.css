@@ -331,10 +331,24 @@ right: 5px;
 }
 
 #configurator_canvasProductCnt.CanvasTensadoFrame #configurator_canvasProductImg{
-    max-height: 84%;
+    
     border:solid 15px transparent;
     border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/canvas-tensado-frame_2637bde6-50da-4cd5-8035-ff7861938bf4.png?v=1710793392) 25 round;
     filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);
+    
+    transform: rotateX(0deg) rotateY(30deg);
+    position: relative;
+}
+
+#configurator_canvasProductCnt.CanvasTensadoFrame #configurator_canvasProductImg::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #7978786b;
+  width: 20px;
+  height: 100%;
+  transform: perspective(1000px) rotateX(0) rotateY(-30deg) translateZ(6px) translateY(2px);
 }
 
 #configurator_canvasProductCnt.CanvasTensadoFrame.Arena #configurator_canvasProductImg{
