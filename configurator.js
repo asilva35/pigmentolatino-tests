@@ -238,6 +238,7 @@ function onBtnOptionSize() {
   const product_info_container = document.querySelector(
     'select[name="options[Size]"]'
   );
+  frame_size_selected = product_info_container.value;
   product_info_container.addEventListener('change', (e) => {
     frame_size_selected = e.target.value;
     renderCanvas();
@@ -309,14 +310,21 @@ function renderCanvas() {
             delta_size += 80;
           }
         }
+        let variant_img_width = variant.featured_image.width;
+        let variant_img_height = variant.featured_image.height;
+        if (variant_img_width > 400) {
+          const delta = variant_img_width / 400;
+          variant_img_height /= delta;
+          variant_img_width = 400;
+        }
         configurator_canvasProductImg.style.backgroundImage = `url(${variant.featured_image.src})`;
         configurator_canvasProductImg.style.width = `${
-          variant.featured_image.width + delta_size
+          variant_img_width + delta_size
         }px`;
         configurator_canvasProductImg.style.height = `${
-          variant.featured_image.height + delta_size
+          variant_img_height + delta_size
         }px`;
-        configurator_canvasProductImg.style.backgroundSize = `${variant.featured_image.width}px ${variant.featured_image.height}px`;
+        configurator_canvasProductImg.style.backgroundSize = `${variant_img_width}px ${variant_img_height}px`;
       }
     });
   }
@@ -619,7 +627,9 @@ function getItemPrice() {
 }
 
 function fetchProduct(configurator_canvasProductImg) {
-  fetch(window.Shopify.routes.root + 'products/leopardo-2.js')
+  const product_path = document.location.pathname.replace('/', '');
+  const url = `${window.Shopify.routes.root}${product_path}.js`;
+  fetch(url)
     .then((response) => response.json())
     .then((product) => {
       product_info = product;
@@ -631,10 +641,17 @@ function renderMainImage(configurator_canvasProductImg) {
   if (frame_size_selected && product_info) {
     product_info.variants.map((variant, index) => {
       if (variant.title === frame_size_selected) {
+        let variant_img_width = variant.featured_image.width;
+        let variant_img_height = variant.featured_image.height;
+        if (variant_img_width > 400) {
+          const delta = variant_img_width / 400;
+          variant_img_height /= delta;
+          variant_img_width = 400;
+        }
         configurator_canvasProductImg.style.backgroundImage = `url(${variant.featured_image.src})`;
-        configurator_canvasProductImg.style.width = `${variant.featured_image.width}px`;
-        configurator_canvasProductImg.style.height = `${variant.featured_image.height}px`;
-        configurator_canvasProductImg.style.backgroundSize = `${variant.featured_image.width}px ${variant.featured_image.height}px`;
+        configurator_canvasProductImg.style.width = `${variant_img_width}px`;
+        configurator_canvasProductImg.style.height = `${variant_img_height}px`;
+        configurator_canvasProductImg.style.backgroundSize = `${variant_img_width}px ${variant_img_height}px`;
       }
     });
     renderThumbnails();
