@@ -1,4 +1,4 @@
-#configurator_shopify{
+.Obras #configurator_shopify{
   width:100%;
   height:100%;
   display:flex;
@@ -6,11 +6,11 @@
   gap:20px;
 }
 
-#configurator_canvasProduct_thumbnails{
+.Obras #configurator_canvasProduct_thumbnails{
 width:100%;
 }
 
-#configurator_canvasProduct_thumbnails ul{
+.Obras #configurator_canvasProduct_thumbnails ul{
 list-style:none;
 margin:0;
 padding:0;
@@ -22,14 +22,14 @@ align-items:flex-start;
 gap:10px;
 }
 
-#configurator_canvasProduct_thumbnails li{
+.Obras #configurator_canvasProduct_thumbnails li{
 width:100px;
 height:100px;
 background-size:contain;
 cursor:pointer;
 }
 
-#configurator_canvasProduct{
+.Obras #configurator_canvasProduct{
   /* min-width: 299px;
   min-height: 414px; */
   margin: 50px auto;
@@ -37,75 +37,75 @@ cursor:pointer;
   transition: all 0.5s ease-in-out;
 }
 
-.product__media-list, .thumbnail-slider{
+.Obras .product__media-list, .thumbnail-slider{
   display:none;
 }
 
-.price-native-cnt{
+.Obras .price-native-cnt{
   display:none!important;
 }
 
-#configurator_canvasProduct.s13x18{
+.Obras #configurator_canvasProduct.s13x18{
     width: 202px;
     height: 280px;
 }
 
-#configurator_canvasProduct.s20x30{
+.Obras #configurator_canvasProduct.s20x30{
     width: 213px;
     height: 320px;
 }
 
-#configurator_canvasProduct.s30x40{
+.Obras #configurator_canvasProduct.s30x40{
     width: 248px;
     height: 330px;
 }
 
-#configurator_canvasProduct.s40x50{
+.Obras #configurator_canvasProduct.s40x50{
     width: 272px;
     height: 340px;
 }
 
-#configurator_canvasProduct.s50x70{
+.Obras #configurator_canvasProduct.s50x70{
     width: 257px;
     height: 360px;
 }
 
-#configurator_canvasProduct.s60x90{
+.Obras #configurator_canvasProduct.s60x90{
     width: 253px;
     height: 380px;
 }
 
-#configurator_canvasProduct.s70x100{
+.Obras #configurator_canvasProduct.s70x100{
     width: 273px;
     height: 390px;
 }
 
-#configurator_canvasProduct.s60x150{
+.Obras #configurator_canvasProduct.s60x150{
     width: 166px;
     height: 414px;
 }
 
-#configurator_canvasProduct.s20x20{
+.Obras #configurator_canvasProduct.s20x20{
     width: 250px;
     height: 250px;
 }
 
-#configurator_canvasProduct.s30x30{
+.Obras #configurator_canvasProduct.s30x30{
     width: 260px;
     height: 260px;
 }
 
-#configurator_canvasProduct.s50x50{
+.Obras #configurator_canvasProduct.s50x50{
     width: 289px;
     height: 289px;
 }
 
-#configurator_canvasProduct.s70x70{
+.Obras #configurator_canvasProduct.s70x70{
     width: 299px;
     height: 299px;
 }
 
-#configurator_canvasProductCnt{
+.Obras #configurator_canvasProductCnt{
   transform-style: preserve-3d;
   transition: all 0.5s ease-in-out;
   width: 100%;
@@ -117,7 +117,7 @@ cursor:pointer;
   justify-content: center;
 }
 
-#configurator_canvasProductImg{
+.Obras #configurator_canvasProductImg{
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
@@ -130,62 +130,62 @@ cursor:pointer;
     filter: drop-shadow(rgba(34, 34, 34, .37) -8px 8px 5px);
 }
 
-#configurator_canvasProduct.s20x20 #configurator_canvasProductImg{
+.Obras #configurator_canvasProduct.s20x20 #configurator_canvasProductImg{
     background-size: auto 90%;
 }
 
-#configurator_canvasProduct.s30x30 #configurator_canvasProductImg{
+.Obras #configurator_canvasProduct.s30x30 #configurator_canvasProductImg{
     background-size: auto 90%;
 }
 
-#configurator_canvasProduct.s50x50 #configurator_canvasProductImg{
+.Obras #configurator_canvasProduct.s50x50 #configurator_canvasProductImg{
     background-size: auto 90%;
 }
 
-#configurator_canvasProduct.s70x70 #configurator_canvasProductImg{
+.Obras #configurator_canvasProduct.s70x70 #configurator_canvasProductImg{
     background-size: auto 90%;
 }
 
-#configurator_canvasProductCnt.Frame #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.Frame #configurator_canvasProductImg{
     border:solid 10px transparent;
     filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);
     width: calc(100% - 40px);
     height: calc(100% - 40px);
 }
 
-#configurator_canvasProductCnt.Frame.Arena #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.Frame.Arena #configurator_canvasProductImg{
     border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-arena.png?v=1710791496) 20 round;
 }
 
-#configurator_canvasProductCnt.Frame.Caramelo #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.Frame.Caramelo #configurator_canvasProductImg{
     border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-caramelo.png?v=1710871747) 20 round;
 }
 
-#configurator_canvasProductCnt.Frame.Cafe #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.Frame.Cafe #configurator_canvasProductImg{
     border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-cafe.png?v=1710873108) 20 round;
 }
 
-#configurator_canvasProductCnt.Frame.CafeOscuro #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.Frame.CafeOscuro #configurator_canvasProductImg{
     border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-cafe-oscuro.png?v=1710873107) 20 round;
 }
 
-#configurator_canvasProductCnt.Frame.Negro #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.Frame.Negro #configurator_canvasProductImg{
     border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-negro.png?v=1710873107) 20 round;
 }
 
-#configurator_canvasProductCnt.Frame.Blanco #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.Frame.Blanco #configurator_canvasProductImg{
     border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-blanco.png?v=1710873107) 20 round;
 }
 
-#configurator_canvasProductCnt.Frame.Dorado #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.Frame.Dorado #configurator_canvasProductImg{
     border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-dorado.png?v=1710873107) 20 round;
 }
 
-#configurator_canvasProductCnt.Frame.Plateado #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.Frame.Plateado #configurator_canvasProductImg{
     border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-plateado.png?v=1710873105) 20 round;
 }
 
-#configurator_canvasProductCnt.MariaLuisa #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.MariaLuisa #configurator_canvasProductImg{
     position:relative;
     width: calc(100% - 80px);
     height: calc(100% - 80px);
@@ -194,7 +194,7 @@ cursor:pointer;
     filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);
 }
 
-#configurator_canvasProductCnt.MariaLuisa #configurator_canvasProductImg::after{
+.Obras #configurator_canvasProductCnt.MariaLuisa #configurator_canvasProductImg::after{
   content:'';
   position:absolute;
   top:0%;
@@ -206,39 +206,39 @@ cursor:pointer;
   filter: drop-shadow(#222 0px 0px 2px);
 }
 
-#configurator_canvasProductCnt.MariaLuisa.Arena #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.MariaLuisa.Arena #configurator_canvasProductImg{
     border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-arena-v2.png?v=1713971171) 70 round;
 }
 
-#configurator_canvasProductCnt.MariaLuisa.Caramelo #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.MariaLuisa.Caramelo #configurator_canvasProductImg{
     border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-caramelo-v2.png?v=1713975100) 70 round;
 }
 
-#configurator_canvasProductCnt.MariaLuisa.Cafe #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.MariaLuisa.Cafe #configurator_canvasProductImg{
     border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-cafe-v2.png?v=1713975100) 70 round;
 }
 
-#configurator_canvasProductCnt.MariaLuisa.CafeOscuro #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.MariaLuisa.CafeOscuro #configurator_canvasProductImg{
     border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-cafe-oscuro-v2.png?v=1713975100) 70 round;
 }
 
-#configurator_canvasProductCnt.MariaLuisa.Negro #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.MariaLuisa.Negro #configurator_canvasProductImg{
     border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-negro-v2.png?v=1713975099) 70 round;
 }
 
-#configurator_canvasProductCnt.MariaLuisa.Blanco #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.MariaLuisa.Blanco #configurator_canvasProductImg{
     border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-blanco-v2.png?v=1713975100) 70 round;
 }
 
-#configurator_canvasProductCnt.MariaLuisa.Dorado #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.MariaLuisa.Dorado #configurator_canvasProductImg{
     border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-dorado-v2.png?v=1713975100) 70 round;
 }
 
-#configurator_canvasProductCnt.MariaLuisa.Plateado #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.MariaLuisa.Plateado #configurator_canvasProductImg{
     border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-plateado-v2.png?v=1713975099) 70 round;
 }
 
-#configurator_canvasProductCnt.Canvas{
+.Obras #configurator_canvasProductCnt.Canvas{
     transform-style: preserve-3d;
     transition: all 0.5s ease-in-out;
     width: 100%;
@@ -253,17 +253,17 @@ cursor:pointer;
     position:relative;
 }
 
-#configurator_canvasProductCnt.Canvas:hover{
+.Obras #configurator_canvasProductCnt.Canvas:hover{
     transform: rotateX(70deg) rotateY(0deg) rotateZ(0deg);
 }
 
-#configurator_canvasProductCnt.Canvas #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.Canvas #configurator_canvasProductImg{
     filter: none;
 }
 
 
-#configurator_canvasProductCnt.Canvas::before,
-#configurator_canvasProductCnt.Canvas::after {
+.Obras #configurator_canvasProductCnt.Canvas::before,
+.Obras #configurator_canvasProductCnt.Canvas::after {
 content: '';
 position: absolute;
 bottom: 10px;
@@ -274,38 +274,38 @@ z-index: -1;
 transition: all .3s ease-in-out;
 }
 
-#configurator_canvasProductCnt.Canvas::before {
+.Obras #configurator_canvasProductCnt.Canvas::before {
 left: 15px;
 transform: skew(-5deg) rotate(-5deg);
 }
 
-#configurator_canvasProductCnt.Canvas::after {
+.Obras #configurator_canvasProductCnt.Canvas::after {
 right: 15px;
 transform: skew(5deg) rotate(5deg);
 }
 
-#configurator_canvasProductCnt.Canvas:hover::before,
-#configurator_canvasProductCnt.Canvas:hover::after {
+.Obras #configurator_canvasProductCnt.Canvas:hover::before,
+.Obras #configurator_canvasProductCnt.Canvas:hover::after {
 box-shadow: 0 2px 14px rgba(0,0,0,.4);
 }
 
-#configurator_canvasProductCnt.Canvas:hover::before {
+.Obras #configurator_canvasProductCnt.Canvas:hover::before {
 left: 5px;
 }
 
-#configurator_canvasProductCnt.Canvas:hover::after {
+.Obras #configurator_canvasProductCnt.Canvas:hover::after {
 right: 5px;
 }
 
-#configurator_canvasProductCnt.Canvas #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.Canvas #configurator_canvasProductImg{
     background-color: transparent;
 }
 
-#configurator_canvasProductCnt.CanvasTensado #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.CanvasTensado #configurator_canvasProductImg{
     background-size: cover;
     background-position: center;
 }
-#configurator_canvasProductCnt.CanvasTensado{
+.Obras #configurator_canvasProductCnt.CanvasTensado{
     transform-style: preserve-3d;
     transition: all 0.5s ease-in-out;
     width: fit-content;
@@ -319,7 +319,7 @@ right: 5px;
     filter:drop-shadow(rgba(34, 34, 34, 0.37) -8px 8px 9px);
 }
 
-#configurator_canvasProductCnt.CanvasTensado::after{
+.Obras #configurator_canvasProductCnt.CanvasTensado::after{
     content: '';
     position: absolute;
     top: 0;
@@ -330,7 +330,7 @@ right: 5px;
     transform: perspective(1000px) rotateX(0) rotateY(-30deg) translateZ(6px) translateY(2px);
 }
 
-#configurator_canvasProductCnt.CanvasTensadoFrame #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.CanvasTensadoFrame #configurator_canvasProductImg{
     
     border:solid 15px transparent;
     border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/canvas-tensado-frame_2637bde6-50da-4cd5-8035-ff7861938bf4.png?v=1710793392) 25 round;
@@ -340,7 +340,7 @@ right: 5px;
     position: relative;
 }
 
-#configurator_canvasProductCnt.CanvasTensadoFrame #configurator_canvasProductImg::after{
+.Obras #configurator_canvasProductCnt.CanvasTensadoFrame #configurator_canvasProductImg::after{
   content: '';
   position: absolute;
   top: 0;
@@ -351,39 +351,39 @@ right: 5px;
   transform: perspective(1000px) rotateX(0) rotateY(-30deg) translateZ(6px) translateY(2px);
 }
 
-#configurator_canvasProductCnt.CanvasTensadoFrame.Arena #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.CanvasTensadoFrame.Arena #configurator_canvasProductImg{
     border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/canvas-tensado-frame_2637bde6-50da-4cd5-8035-ff7861938bf4.png?v=1710793392) 25 round;
 }
 
-#configurator_canvasProductCnt.CanvasTensadoFrame.Caramelo #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.CanvasTensadoFrame.Caramelo #configurator_canvasProductImg{
     border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/canvas-tensado-frame-caramelo.png?v=1712687369) 25 round;
 }
 
-#configurator_canvasProductCnt.CanvasTensadoFrame.Cafe #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.CanvasTensadoFrame.Cafe #configurator_canvasProductImg{
     border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/canvas-tensado-frame-cafe.png?v=1712688354) 25 round;
 }
 
-#configurator_canvasProductCnt.CanvasTensadoFrame.CafeOscuro #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.CanvasTensadoFrame.CafeOscuro #configurator_canvasProductImg{
     border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/canvas-tensado-frame-cafe-oscuro.png?v=1712688355) 25 round;
 }
 
-#configurator_canvasProductCnt.CanvasTensadoFrame.Negro #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.CanvasTensadoFrame.Negro #configurator_canvasProductImg{
     border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/canvas-tensado-frame-negro.png?v=1712688354) 25 round;
 }
 
-#configurator_canvasProductCnt.CanvasTensadoFrame.Blanco #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.CanvasTensadoFrame.Blanco #configurator_canvasProductImg{
     border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/canvas-tensado-frame-blanco.png?v=1712688354) 25 round;
 }
 
-#configurator_canvasProductCnt.CanvasTensadoFrame.Dorado #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.CanvasTensadoFrame.Dorado #configurator_canvasProductImg{
     border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/canvas-tensado-frame-dorado.png?v=1712688354) 25 round;
 }
 
-#configurator_canvasProductCnt.CanvasTensadoFrame.Plateado #configurator_canvasProductImg{
+.Obras #configurator_canvasProductCnt.CanvasTensadoFrame.Plateado #configurator_canvasProductImg{
     border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/canvas-tensado-frame-plateado.png?v=1712688354) 25 round;
 }
 
-.configurator_mainImageStyleDefault{
+.Obras .configurator_mainImageStyleDefault{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -394,7 +394,7 @@ right: 5px;
   transition: all 0.5s ease-in-out;
 }
 
-.configurator_mainImageStyleWithFrame{
+.Obras .configurator_mainImageStyleWithFrame{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -407,7 +407,7 @@ right: 5px;
   transition: all 0.5s ease-in-out;
 }
 
-.configurator_mainImageStyleWithMariaLuisa{
+.Obras .configurator_mainImageStyleWithMariaLuisa{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -420,7 +420,7 @@ right: 5px;
   transition: all 0.5s ease-in-out;
 }
 
-.configurator_mainImageStyleCanvasOnly{
+.Obras .configurator_mainImageStyleCanvasOnly{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -431,7 +431,7 @@ right: 5px;
   transition: all 0.5s ease-in-out;
 }
 
-.configurator_mainImageStyleCanvasTensado{
+.Obras .configurator_mainImageStyleCanvasTensado{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -444,7 +444,7 @@ right: 5px;
   transition: all 0.5s ease-in-out;
 }
 
-.configurator_mainImageStyleCanvasTensadoFrame{
+.Obras .configurator_mainImageStyleCanvasTensadoFrame{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -457,25 +457,25 @@ right: 5px;
   transition: all 0.5s ease-in-out;
 }
 
-.configurator_options{
+.Obras .configurator_options{
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.configurator_alternative_price{
+.Obras .configurator_alternative_price{
   font-size:1.8rem;
   font-weight:500;
   color:#000;
 }
 
-.configurator_chooseFrame{
+.Obras .configurator_chooseFrame{
   position:relative;
   width: 339px;
   height: 78px;
 }
 
-.configurator_chooseFrame_cnt{
+.Obras .configurator_chooseFrame_cnt{
   position:absolute;
   top:0;
   left:0;   
@@ -485,7 +485,7 @@ right: 5px;
   overflow:hidden;
 }
 
-.configurator_chooseFrame_slider{
+.Obras .configurator_chooseFrame_slider{
   position:absolute;
   top:0;
   left:0;
@@ -495,7 +495,7 @@ right: 5px;
   transition: all 0.5s linear;
 }
 
-.configurator_chooseFrame_next{
+.Obras .configurator_chooseFrame_next{
   position:absolute;
   top:50%;
   right:-20px;
@@ -505,7 +505,7 @@ right: 5px;
   cursor:pointer;
 }
 
-.configurator_chooseFrame_prev{
+.Obras .configurator_chooseFrame_prev{
   position:absolute;
   top:50%;
   left:-20px;
@@ -515,7 +515,7 @@ right: 5px;
   cursor:pointer;
 }
 
-.configurator_box3d{
+.Obras .configurator_box3d{
   display:none;
   position: absolute; 
   top: 50%; 
@@ -527,14 +527,14 @@ right: 5px;
   transition: all 0.5s ease-in-out;
 }
 
-.configurator_btnFrame{
+.Obras .configurator_btnFrame{
   cursor:pointer;
   display: flex;
 justify-content: center;
 align-items: center;
 }
 
-.configurator_btnFrame_img{
+.Obras .configurator_btnFrame_img{
   width: 70px; 
   height:70px; 
   border-radius: 50%;
@@ -542,11 +542,11 @@ align-items: center;
   transition: all 0.5s linear;
 }
 
-.configurator_btnFrame.selected .configurator_btnFrame_img{
+.Obras .configurator_btnFrame.selected .configurator_btnFrame_img{
   border: solid 2px #222;
 }
 
-.configurator_chooseColor{
+.Obras .configurator_chooseColor{
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -554,11 +554,11 @@ align-items: center;
   margin:20px 0;
 }
 
-#configurator_chooseColor_list_cnt{
+.Obras #configurator_chooseColor_list_cnt{
 position:relative;
 }
 
-.configurator_chooseColor_label{
+.Obras .configurator_chooseColor_label{
 position:absolute;
 top:30px;
 left:0;
@@ -569,7 +569,7 @@ transform: translate(0px, 0px);
 opacity:0;
 }
 
-.configurator_chooseColor_ul{
+.Obras .configurator_chooseColor_ul{
   margin:0;
   padding:0;
   list-style: none;
@@ -578,15 +578,15 @@ opacity:0;
   gap:5px;
 }
 
-.configurator_chooseColor_ul li{
+.Obras .configurator_chooseColor_ul li{
   display:none;
 }
 
-.configurator_chooseColor_ul li.no-color{
+.Obras .configurator_chooseColor_ul li.no-color{
   display:block;
 }
 
-.configurator_chooseColor_btnColor{
+.Obras .configurator_chooseColor_btnColor{
   display:block; 
   cursor: pointer;
   width: 24px; 
@@ -595,11 +595,11 @@ opacity:0;
   background-color: #F0DFD3;
 }
 
-.configurator_sizeguide{
+.Obras .configurator_sizeguide{
   width:100%;
 }
 
-.configurator_sizeguide_link{
+.Obras .configurator_sizeguide_link{
   font-size: 12px;
   color: #62a0d5;
   text-decoration: underline;
@@ -607,18 +607,18 @@ opacity:0;
 }
 
 /*CUSTOMIZE ADD TO CART BUY NOW*/
-.product-form__submit,.shopify-payment-button{
+.Obras .product-form__submit,.shopify-payment-button{
   display:none;
 }
 
-.configurator_addToCartBtn{
+.Obras .configurator_addToCartBtn{
   text-align:center;
   color:#6c6737;
   padding:20px 0;
   cursor:pointer;
 }
 
-.configurator_buyNowBtn{
+.Obras .configurator_buyNowBtn{
   text-align:center;
   color:#FFF;
   padding:20px 0;

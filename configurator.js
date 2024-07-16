@@ -639,6 +639,7 @@ function fetchProduct(configurator_canvasProductImg) {
 }
 
 function renderMainImage(configurator_canvasProductImg) {
+  console.log(product_info);
   if (frame_size_selected && product_info) {
     product_info.variants.map((variant, index) => {
       if (variant.title === frame_size_selected) {
@@ -674,8 +675,8 @@ function renderThumbnails() {
 }
 
 window.onload = () => {
-  // const type_product = document.getElementById('input_product_type').value;
-  // if(type_product !== "Obras") return;
+  const type_product = document.getElementById('input_product_type').value;
+  if (type_product !== 'Obras') return;
 
   const productmedia = document.querySelectorAll('.product__media-item');
   const canvas_product = document.querySelector('#configurator_canvasProduct');
