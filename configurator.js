@@ -183,18 +183,37 @@ function addColorOptions(configurator_options) {
 }
 
 function addSizesGuide(configurator_options) {
-  const sizes_guide = document.createElement('div');
-  sizes_guide.classList.add('configurator_sizeguide');
+  //ADD MODAL
+  const sizes_guide_modal = document.createElement('div');
+  sizes_guide_modal.classList.add('configurator_sizeguide_modal');
+  const sizes_guide_img = document.createElement('img');
+  sizes_guide_img.src =
+    'https://cdn.shopify.com/s/files/1/0838/8866/8990/files/Guia-de-tamanos.jpg?v=1721161566';
+  sizes_guide_modal.appendChild(sizes_guide_img);
+  document.body.appendChild(sizes_guide_modal);
+
+  sizes_guide_modal.addEventListener('click', (evt) => {
+    if (sizes_guide_modal.classList.contains('show')) {
+      sizes_guide_modal.classList.remove('show');
+    } else {
+      sizes_guide_modal.classList.add('show');
+    }
+  });
+
+  //ADD LINK
+  const sizes_guide_link = document.createElement('div');
+  sizes_guide_link.classList.add('configurator_sizeguide_link_cnt');
 
   const link = document.createElement('a');
   link.classList.add('configurator_sizeguide_link');
-  link.href = '/sizes-guide';
-  link.target = '_blanck';
-  link.innerHTML = 'Guía de Tamaños';
-
-  sizes_guide.appendChild(link);
-
-  configurator_options.appendChild(sizes_guide);
+  link.innerHTML = 'Guía de Tamaños!';
+  sizes_guide_link.appendChild(link);
+  configurator_options.appendChild(sizes_guide_link);
+  link.addEventListener('click', (evt) => {
+    console.log(23);
+    evt.preventDefault();
+    sizes_guide_modal.classList.add('show');
+  });
 }
 
 function addAlternativePrice(configurator_options) {
@@ -639,7 +658,6 @@ function fetchProduct(configurator_canvasProductImg) {
 }
 
 function renderMainImage(configurator_canvasProductImg) {
-  console.log(product_info);
   if (frame_size_selected && product_info) {
     product_info.variants.map((variant, index) => {
       if (variant.title === frame_size_selected) {

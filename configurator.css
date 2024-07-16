@@ -594,8 +594,61 @@ opacity:0;
   border-radius: 12px; 
   background-color: #F0DFD3;
 }
+/*SIZE GUIDE*/
 
-.Obras .configurator_sizeguide{
+.configurator_sizeguide_modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2f2e2e70;
+  z-index: 99;
+  align-items: center;
+  justify-content: center;
+  display:none;
+  padding:0 16px;
+}
+
+.configurator_sizeguide_modal.show{
+  display:flex;
+}
+
+.configurator_sizeguide_modal::before{
+  content: "X";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #fff;
+  z-index: -1;
+  padding: 20px 30px;
+  text-align: right;
+  font-size: 1.5em;
+  border: solid #222 8px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 700px) {
+  .configurator_sizeguide_modal{
+    padding:0;  
+  }
+  .configurator_sizeguide_modal::before{
+    width: 80%;
+    height: 80%;
+  }
+}
+
+.configurator_sizeguide_modal img{
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+}
+
+.Obras .configurator_sizeguide_link_cnt{
   width:100%;
 }
 
