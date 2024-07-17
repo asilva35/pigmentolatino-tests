@@ -154,35 +154,35 @@ cursor:pointer;
 }
 
 .Obras #configurator_canvasProductCnt.Frame.Arena #configurator_canvasProductImg{
-    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-arena.png?v=1710791496) 20 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-arena.png?v=1710791496) 20 round !important;
 }
 
 .Obras #configurator_canvasProductCnt.Frame.Caramelo #configurator_canvasProductImg{
-    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-caramelo.png?v=1710871747) 20 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-caramelo.png?v=1710871747) 20 round !important;
 }
 
 .Obras #configurator_canvasProductCnt.Frame.Cafe #configurator_canvasProductImg{
-    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-cafe.png?v=1710873108) 20 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-cafe.png?v=1710873108) 20 round !important;
 }
 
 .Obras #configurator_canvasProductCnt.Frame.CafeOscuro #configurator_canvasProductImg{
-    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-cafe-oscuro.png?v=1710873107) 20 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-cafe-oscuro.png?v=1710873107) 20 round !important;
 }
 
 .Obras #configurator_canvasProductCnt.Frame.Negro #configurator_canvasProductImg{
-    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-negro.png?v=1710873107) 20 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-negro.png?v=1710873107) 20 round !important;
 }
 
 .Obras #configurator_canvasProductCnt.Frame.Blanco #configurator_canvasProductImg{
-    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-blanco.png?v=1710873107) 20 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-blanco.png?v=1710873107) 20 round !important;
 }
 
 .Obras #configurator_canvasProductCnt.Frame.Dorado #configurator_canvasProductImg{
-    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-dorado.png?v=1710873107) 20 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-dorado.png?v=1710873107) 20 round !important;
 }
 
 .Obras #configurator_canvasProductCnt.Frame.Plateado #configurator_canvasProductImg{
-    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-plateado.png?v=1710873105) 20 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-plateado.png?v=1710873105) 20 round !important;
 }
 
 .Obras #configurator_canvasProductCnt.MariaLuisa #configurator_canvasProductImg{
@@ -190,7 +190,7 @@ cursor:pointer;
     width: calc(100% - 80px);
     height: calc(100% - 80px);
     border:solid 50px transparent;
-    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-arena-v2.png?v=1713971171) 70 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-arena-v2.png?v=1713971171) 70 round !important;
     filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);
 }
 
@@ -333,7 +333,7 @@ right: 5px;
 .Obras #configurator_canvasProductCnt.CanvasTensadoFrame #configurator_canvasProductImg{
     
     border:solid 10px transparent;
-    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/canvas-tensado-frame_2637bde6-50da-4cd5-8035-ff7861938bf4.png?v=1710793392) 25 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/canvas-tensado-frame_2637bde6-50da-4cd5-8035-ff7861938bf4.png?v=1710793392) 25 round !important;
     filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);
     
     transform: rotateX(0deg) rotateY(0deg);
@@ -352,35 +352,35 @@ right: 5px;
 }*/
 
 .Obras #configurator_canvasProductCnt.CanvasTensadoFrame.Arena #configurator_canvasProductImg{
-    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/canvas-tensado-frame_2637bde6-50da-4cd5-8035-ff7861938bf4.png?v=1710793392) 25 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/canvas-tensado-frame_2637bde6-50da-4cd5-8035-ff7861938bf4.png?v=1710793392) 25 round !important;
 }
 
 .Obras #configurator_canvasProductCnt.CanvasTensadoFrame.Caramelo #configurator_canvasProductImg{
-    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/canvas-tensado-frame-caramelo.png?v=1712687369) 25 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/canvas-tensado-frame-caramelo.png?v=1712687369) 25 round !important;
 }
 
 .Obras #configurator_canvasProductCnt.CanvasTensadoFrame.Cafe #configurator_canvasProductImg{
-    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/canvas-tensado-frame-cafe.png?v=1712688354) 25 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/canvas-tensado-frame-cafe.png?v=1712688354) 25 round !important;
 }
 
 .Obras #configurator_canvasProductCnt.CanvasTensadoFrame.CafeOscuro #configurator_canvasProductImg{
-    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/canvas-tensado-frame-cafe-oscuro.png?v=1712688355) 25 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/canvas-tensado-frame-cafe-oscuro.png?v=1712688355) 25 round !important;
 }
 
 .Obras #configurator_canvasProductCnt.CanvasTensadoFrame.Negro #configurator_canvasProductImg{
-    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/canvas-tensado-frame-negro.png?v=1712688354) 25 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/canvas-tensado-frame-negro.png?v=1712688354) 25 round !important;
 }
 
 .Obras #configurator_canvasProductCnt.CanvasTensadoFrame.Blanco #configurator_canvasProductImg{
-    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/canvas-tensado-frame-blanco.png?v=1712688354) 25 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/canvas-tensado-frame-blanco.png?v=1712688354) 25 round !important;
 }
 
 .Obras #configurator_canvasProductCnt.CanvasTensadoFrame.Dorado #configurator_canvasProductImg{
-    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/canvas-tensado-frame-dorado.png?v=1712688354) 25 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/canvas-tensado-frame-dorado.png?v=1712688354) 25 round !important;
 }
 
 .Obras #configurator_canvasProductCnt.CanvasTensadoFrame.Plateado #configurator_canvasProductImg{
-    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/canvas-tensado-frame-plateado.png?v=1712688354) 25 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/canvas-tensado-frame-plateado.png?v=1712688354) 25 round !important;
 }
 
 .Obras .configurator_mainImageStyleDefault{
@@ -402,7 +402,7 @@ right: 5px;
   width:auto;
   height:90%;
   border:solid 10px transparent;
-  border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-arena.png?v=1710791496) 10 round;
+  border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/frame-arena.png?v=1710791496) 10 round !important;
   filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);
   transition: all 0.5s ease-in-out;
 }
@@ -415,7 +415,7 @@ right: 5px;
   width:auto;
   height:90%;
   border:solid 80px transparent;
-  border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/maria-luisa-arena.png?v=1710791776) 80 round;
+  border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/maria-luisa-arena.png?v=1710791776) 80 round !important;
   filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);
   transition: all 0.5s ease-in-out;
 }
@@ -439,7 +439,7 @@ right: 5px;
   width:auto;
   height:60%;
   border:25px solid transparent;
-  border-image: url(http://127.0.0.1:5500/images/frames/canva_blanco.jpg) 25 round;
+  border-image: url(http://127.0.0.1:5500/images/frames/canva_blanco.jpg) 25 round !important;
   filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);
   transition: all 0.5s ease-in-out;
 }
@@ -452,7 +452,7 @@ right: 5px;
   width:auto;
   height:90%;
   border:solid 25px transparent;
-  border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/canvas-tensado-frame_2637bde6-50da-4cd5-8035-ff7861938bf4.png?v=1710793392) 25 round;
+  border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/canvas-tensado-frame_2637bde6-50da-4cd5-8035-ff7861938bf4.png?v=1710793392) 25 round !important;
   filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);
   transition: all 0.5s ease-in-out;
 }
