@@ -335,29 +335,40 @@ function renderCanvas() {
   if (frame_size_selected && product_info) {
     product_info.variants.map((variant, index) => {
       if (variant.title === frame_size_selected) {
+        //DELTA SIZE IS THE ADDITIONAL SIZE OF THE CANVAS DEPENDING ON WHETHER THE ART HAS A FRAME
+        //1CM = 5PX
+        //NORMAL FRAME SIZE IS 2CM = 10PX
         let delta_size = 0;
         if (frame_option_selected === 'CanvasTensadoFrame') {
+          //DELTA IS 20 BECAUSE FRAME IS 2CM = 10PX * 2 (MULTIPLY FOR EACH SIDE) = 20PX
           delta_size += 20;
         }
         if (frame_option_selected === 'Frame') {
+          //DELTA IS 20 BECAUSE FRAME IS 2CM = 10PX * 2 (MULTIPLY FOR EACH SIDE) = 20PX
           delta_size += 20;
         }
         if (frame_option_selected === 'MariaLuisa') {
-          delta_size += 50;
+          //delta_size += 50;
           if (['13x18', '20x20', '20x30'].includes(frame_size_selected)) {
-            delta_size += 40;
+            //DELTA IS 60 BECAUSE FRAME IS 2CM + 4CM OF MARIALUISA = 6CM = 30PX * 2 (MULTIPLY FOR EACH SIDE) = 60PX
+            delta_size += 60;
           }
           if (
             ['30x30', '30x40', '40x50', '50x50', '50x70'].includes(
               frame_size_selected
             )
           ) {
-            delta_size += 60;
+            //DELTA IS 80 BECAUSE FRAME IS 2CM + 6CM OF MARIALUISA = 8CM = 40PX * 2 (MULTIPLY FOR EACH SIDE) = 80PX
+            delta_size += 80;
           }
           if (
             ['70x70', '60x90', '70x100', '60x150'].includes(frame_size_selected)
           ) {
-            delta_size += 80;
+            //DELTA IS 20 BECAUSE FRAME IS 2CM + 8CM OF MARIALUISA = 16CM = 80PX * 2 (MULTIPLY FOR EACH SIDE) = 160PX
+            delta_size += 160;
+          } else {
+            //IF FRAME SIZE IS NOT DEFINED DELTA IS 60 BY DEFAULT
+            delta_size += 60;
           }
         }
         let variant_img_width = variant.featured_image.width;
@@ -367,6 +378,7 @@ function renderCanvas() {
           variant_img_height /= delta;
           variant_img_width = 400;
         }
+        console.log('Delta', delta_size);
         configurator_canvasProductImg.style.backgroundImage = `url(${variant.featured_image.src})`;
         configurator_canvasProductImg.style.width = `${
           variant_img_width + delta_size
@@ -375,6 +387,9 @@ function renderCanvas() {
           variant_img_height + delta_size
         }px`;
         configurator_canvasProductImg.style.backgroundSize = `${variant_img_width}px ${variant_img_height}px`;
+        configurator_canvasProductImg.style.border = `solid ${
+          delta_size / 2
+        }px transparent`;
       }
     });
   }

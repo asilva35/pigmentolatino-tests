@@ -207,35 +207,35 @@ cursor:pointer;
 }
 
 .Obras #configurator_canvasProductCnt.MariaLuisa.Arena #configurator_canvasProductImg{
-    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-arena-v2.png?v=1713971171) 70 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-arena-v2.png?v=1713971171) 70 round !important;
 }
 
 .Obras #configurator_canvasProductCnt.MariaLuisa.Caramelo #configurator_canvasProductImg{
-    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-caramelo-v2.png?v=1713975100) 70 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-caramelo-v2.png?v=1713975100) 70 round !important;
 }
 
 .Obras #configurator_canvasProductCnt.MariaLuisa.Cafe #configurator_canvasProductImg{
-    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-cafe-v2.png?v=1713975100) 70 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-cafe-v2.png?v=1713975100) 70 round !important;
 }
 
 .Obras #configurator_canvasProductCnt.MariaLuisa.CafeOscuro #configurator_canvasProductImg{
-    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-cafe-oscuro-v2.png?v=1713975100) 70 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-cafe-oscuro-v2.png?v=1713975100) 70 round !important;
 }
 
 .Obras #configurator_canvasProductCnt.MariaLuisa.Negro #configurator_canvasProductImg{
-    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-negro-v2.png?v=1713975099) 70 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-negro-v2.png?v=1713975099) 70 round !important;
 }
 
 .Obras #configurator_canvasProductCnt.MariaLuisa.Blanco #configurator_canvasProductImg{
-    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-blanco-v2.png?v=1713975100) 70 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-blanco-v2.png?v=1713975100) 70 round !important;
 }
 
 .Obras #configurator_canvasProductCnt.MariaLuisa.Dorado #configurator_canvasProductImg{
-    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-dorado-v2.png?v=1713975100) 70 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-dorado-v2.png?v=1713975100) 70 round !important;
 }
 
 .Obras #configurator_canvasProductCnt.MariaLuisa.Plateado #configurator_canvasProductImg{
-    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-plateado-v2.png?v=1713975099) 70 round;
+    border-image: url(https://cdn.shopify.com/s/files/1/0838/8866/8990/files/maria-luisa-plateado-v2.png?v=1713975099) 70 round !important;
 }
 
 .Obras #configurator_canvasProductCnt.Canvas{
@@ -332,7 +332,7 @@ right: 5px;
 
 .Obras #configurator_canvasProductCnt.CanvasTensadoFrame #configurator_canvasProductImg{
     
-    border:solid 15px transparent;
+    border:solid 10px transparent;
     border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/canvas-tensado-frame_2637bde6-50da-4cd5-8035-ff7861938bf4.png?v=1710793392) 25 round;
     filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);
     
