@@ -532,6 +532,7 @@ right: 5px;
   display: flex;
 justify-content: center;
 align-items: center;
+  position:relative;
 }
 
 .Obras .configurator_btnFrame_img{
@@ -544,6 +545,27 @@ align-items: center;
 
 .Obras .configurator_btnFrame.selected .configurator_btnFrame_img{
   border: solid 2px #222;
+}
+
+.Obras .choose_frame_tooltip{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #fff;
+  padding: 10px;
+  border: solid 1px #ccc;
+  border-radius: 10px;
+  font-size: 0.7em;
+  font-weight: bold;
+  z-index:10;
+  display:none;
+  width:auto;
+  white-space:nowrap;
+}
+
+.Obras .choose_frame_tooltip.show{
+  display:block;
 }
 
 .Obras .configurator_chooseColor{

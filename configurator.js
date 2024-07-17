@@ -3,31 +3,37 @@ const frame_options = [
     selection: 'Photo',
     img_choose:
       'https://cdn.shopify.com/s/files/1/0686/9106/7109/files/btn-no-frame-v2.png?v=1710786795',
+    tooltip: 'Arte Impreso en Papel de Fotografía',
   },
   {
     selection: 'Frame',
     img_choose:
       'https://cdn.shopify.com/s/files/1/0686/9106/7109/files/btn-with-frame.png?v=1710787013',
+    tooltip: 'Arte con marco de madera',
   },
   {
     selection: 'MariaLuisa',
     img_choose:
       'https://cdn.shopify.com/s/files/1/0686/9106/7109/files/btn-with-maria-luisa.png?v=1710787013',
+    tooltip: 'Maria Luisa: Rectángulo de cartón alrededor del arte',
   },
   {
     selection: 'Canvas',
     img_choose:
       'https://cdn.shopify.com/s/files/1/0686/9106/7109/files/btn-canvas-only.png?v=1710787013',
+    tooltip: 'Arte Impreso en Lienzo',
   },
   {
     selection: 'CanvasTensado',
     img_choose:
       'https://cdn.shopify.com/s/files/1/0686/9106/7109/files/btn-canvas-tensado.png?v=1710787013',
+    tooltip: 'Arte Impreso en Lienzo Tensado con listones de Madera',
   },
   {
     selection: 'CanvasTensadoFrame',
     img_choose:
       'https://cdn.shopify.com/s/files/1/0838/8866/8990/files/btn-canvas-tensado-frame-v2.png?v=1714084774',
+    tooltip: 'Arte Tensado enmarcado en Madera',
   },
 ];
 
@@ -83,10 +89,21 @@ function addFrameOptions(configurator_options) {
   choose_frame.classList.add('configurator_chooseFrame');
   cnt.classList.add('configurator_chooseFrame_cnt');
   slider.classList.add('configurator_chooseFrame_slider');
+
+  const tooltip = document.createElement('div');
+  tooltip.classList.add('choose_frame_tooltip');
+  tooltip.innerHTML = 'Loremp Ipsump';
+  choose_frame.appendChild(tooltip);
+
+  tooltip.addEventListener('click', (e) => {
+    tooltip.classList.remove('show');
+  });
+
   frame_options.forEach((option, index) => {
     const btn_frame = document.createElement('div');
     btn_frame.classList.add('configurator_btnFrame');
     btn_frame.dataset.selectedframe = option.selection;
+    btn_frame.dataset.tooltip = option.tooltip;
 
     const img_choose = document.createElement('img');
     img_choose.classList.add('configurator_btnFrame_img');
@@ -94,6 +111,20 @@ function addFrameOptions(configurator_options) {
 
     btn_frame.appendChild(img_choose);
     slider.appendChild(btn_frame);
+
+    btn_frame.addEventListener('mouseover', (e) => {
+      tooltip.innerHTML = e.target.dataset.tooltip;
+      tooltip.classList.add('show');
+    });
+
+    btn_frame.addEventListener('click', (e) => {
+      tooltip.innerHTML = e.target.dataset.tooltip;
+      tooltip.classList.add('show');
+    });
+
+    btn_frame.addEventListener('mouseleave', (e) => {
+      tooltip.classList.remove('show');
+    });
   });
   cnt.appendChild(slider);
   choose_frame.appendChild(cnt);
@@ -210,7 +241,6 @@ function addSizesGuide(configurator_options) {
   sizes_guide_link.appendChild(link);
   configurator_options.appendChild(sizes_guide_link);
   link.addEventListener('click', (evt) => {
-    console.log(23);
     evt.preventDefault();
     sizes_guide_modal.classList.add('show');
   });
@@ -466,8 +496,6 @@ function customizeAddTocart() {
       }
     }
 
-    console.log(formData);
-
     fetch(window.Shopify.routes.root + 'cart/add.js', {
       method: 'POST',
       headers: {
@@ -568,8 +596,6 @@ function addProductToCart(input_productid, callback) {
       });
     }
   }
-
-  console.log(formData);
 
   fetch(window.Shopify.routes.root + 'cart/add.js', {
     method: 'POST',
