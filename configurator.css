@@ -245,7 +245,7 @@ cursor:pointer;
     height: 100%;
     position: relative;
     /*transform: rotateX(0deg) rotateY(30deg) rotateZ(0deg);*/
-    transform: rotateX(70deg) rotateY(0deg) rotateZ(-60deg);
+    /*transform: rotateX(70deg) rotateY(0deg) rotateZ(-60deg);*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -254,7 +254,7 @@ cursor:pointer;
 }
 
 .Obras #configurator_canvasProductCnt.Canvas:hover{
-    transform: rotateX(70deg) rotateY(0deg) rotateZ(0deg);
+    transform: rotateX(0deg) rotateY(25deg) rotateZ(0deg);
 }
 
 .Obras #configurator_canvasProductCnt.Canvas #configurator_canvasProductImg{
@@ -336,11 +336,11 @@ right: 5px;
     border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/canvas-tensado-frame_2637bde6-50da-4cd5-8035-ff7861938bf4.png?v=1710793392) 25 round;
     filter:drop-shadow(rgba(34, 34, 34, 0.37) 8px 8px 5px);
     
-    transform: rotateX(0deg) rotateY(30deg);
+    transform: rotateX(0deg) rotateY(0deg);
     position: relative;
 }
 
-.Obras #configurator_canvasProductCnt.CanvasTensadoFrame #configurator_canvasProductImg::after{
+/*.Obras #configurator_canvasProductCnt.CanvasTensadoFrame #configurator_canvasProductImg::after{
   content: '';
   position: absolute;
   top: 0;
@@ -349,7 +349,7 @@ right: 5px;
   width: 20px;
   height: 100%;
   transform: perspective(1000px) rotateX(0) rotateY(-30deg) translateZ(6px) translateY(2px);
-}
+}*/
 
 .Obras #configurator_canvasProductCnt.CanvasTensadoFrame.Arena #configurator_canvasProductImg{
     border-image: url(https://cdn.shopify.com/s/files/1/0686/9106/7109/files/canvas-tensado-frame_2637bde6-50da-4cd5-8035-ff7861938bf4.png?v=1710793392) 25 round;
