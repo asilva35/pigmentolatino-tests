@@ -92,7 +92,7 @@ function addFrameOptions(configurator_options) {
 
   const tooltip = document.createElement('div');
   tooltip.classList.add('choose_frame_tooltip');
-  tooltip.innerHTML = 'Loremp Ipsump';
+  tooltip.innerHTML = '';
   choose_frame.appendChild(tooltip);
 
   tooltip.addEventListener('click', (e) => {
@@ -219,7 +219,7 @@ function addSizesGuide(configurator_options) {
   sizes_guide_modal.classList.add('configurator_sizeguide_modal');
   const sizes_guide_img = document.createElement('img');
   sizes_guide_img.src =
-    'https://cdn.shopify.com/s/files/1/0838/8866/8990/files/Guia-de-tamanos.jpg?v=1721161566';
+    'https://cdn.shopify.com/s/files/1/0838/8866/8990/files/sizes-guide.jpg?v=1722099662';
   sizes_guide_modal.appendChild(sizes_guide_img);
   document.body.appendChild(sizes_guide_modal);
 
@@ -277,7 +277,12 @@ function onBtnOptionColor() {
   );
   btn_color.forEach((btn) => {
     btn.addEventListener('click', (e) => {
+      btn_color.forEach((_btn) => {
+        _btn.classList.remove('selected');
+      });
+      e.target.classList.add('selected');
       frame_color_selected = e.target.dataset.color;
+      console.log(e.target);
       renderCanvas();
     });
   });
@@ -422,7 +427,22 @@ function toggleOptionColors() {
       if (li.classList.contains('no-color')) {
         li.style.display = 'none';
       } else {
-        li.style.display = 'block';
+        //li.style.display = 'block';
+        const btnColor = li.querySelector('.configurator_chooseColor_btnColor');
+        let currentColor = btnColor.dataset.color.replaceAll('Cafe', 'Café');
+        product_info.variants.map((variant) => {
+          if (
+            variant.option1.toLowerCase() ===
+              frame_size_selected.toLowerCase() &&
+            variant.option2.toLowerCase() === currentColor.toLowerCase()
+          ) {
+            if (variant.available) {
+              li.style.display = 'block';
+            } else {
+              li.style.display = 'none';
+            }
+          }
+        });
       }
     } else {
       if (li.classList.contains('no-color')) {
@@ -433,6 +453,7 @@ function toggleOptionColors() {
     }
   });
 
+  //TOOLTIPS
   if (
     ['Frame', 'MariaLuisa', 'CanvasTensadoFrame'].includes(
       frame_option_selected
@@ -647,7 +668,6 @@ function loadFramesVariants() {
     .then((frames) => {
       if (frames && frames.variants) {
         frames_variants = frames.variants;
-        console.log('frames_variants', frames_variants);
         selectFrameVariant();
         customizeCartActions();
       }

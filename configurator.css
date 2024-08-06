@@ -549,12 +549,12 @@ align-items: center;
 
 .Obras .choose_frame_tooltip{
   position: absolute;
-  top: 0;
+  top: 100%;
   left: 50%;
-  transform: translate(-50%,-50%);
-  background: #fff;
+  transform: translate(-50%,-25%);
+  background: transparent;
   padding: 10px;
-  border: solid 1px #ccc;
+  border: none;
   border-radius: 10px;
   font-size: 0.7em;
   font-weight: bold;
@@ -616,6 +616,9 @@ opacity:0;
   border-radius: 12px; 
   background-color: #F0DFD3;
 }
+.Obras .configurator_chooseColor_btnColor.selected{
+  border:solid 2px #4478ca !important;
+}
 /*SIZE GUIDE*/
 
 .configurator_sizeguide_modal{
@@ -644,7 +647,7 @@ opacity:0;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  background: #fff;
+  background: #f0f0f0;
   z-index: -1;
   padding: 20px 30px;
   text-align: right;
@@ -659,8 +662,12 @@ opacity:0;
     padding:0;  
   }
   .configurator_sizeguide_modal::before{
-    width: 80%;
-    height: 80%;
+    width: 60%;
+    height: 60%;
+    min-width:526px;
+    min-height:570px;
+    max-width:800px;
+    max-height:800px;
   }
 }
 
@@ -700,4 +707,8 @@ opacity:0;
   cursor:pointer;
   background-color:#6c6737;
   padding:9px 0;
+}
+
+.Obras variant-selects div.product-form__input.product-form__input--dropdown:nth-child(2){
+  display:none;
 }
